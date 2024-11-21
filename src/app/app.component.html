@@ -1,0 +1,12 @@
+<h1>Cadastro de Produtos no Firebase</h1>
+<div *ngIf="isAuth">
+  <nav>
+    <a routerLink="/tabela">Tabela</a>
+    <br />
+    <a routerLink="/cadastro">Cadastro</a>
+  </nav>
+  <br />
+  <button (click)="realizarLogout()">Sair</button>
+  <router-outlet></router-outlet>
+</div>
+<app-login *ngIf="!isAuth" (onLoginEvent)="atualizaLogin()"></app-login>
