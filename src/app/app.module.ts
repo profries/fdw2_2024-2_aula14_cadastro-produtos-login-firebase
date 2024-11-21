@@ -26,6 +26,12 @@ import { LoginComponent } from './login/login.component';
   providers: [
     provideFirebaseApp(() => initializeApp(
       {
+        "projectId":"cadastro-produtos-2024-2-6afc2",
+        "appId":"1:320522040082:web:de333feaa4bab5da2f79cb",
+        "storageBucket":"cadastro-produtos-2024-2-6afc2.firebasestorage.app",
+        "apiKey":"AIzaSyCl-CfW9JIX_Nqr-aLePqOPLhfUI2ckjME",
+        "authDomain":"cadastro-produtos-2024-2-6afc2.firebaseapp.com",
+        "messagingSenderId":"320522040082"
       })),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),

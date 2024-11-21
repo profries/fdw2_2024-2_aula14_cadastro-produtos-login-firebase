@@ -11,12 +11,10 @@ export class AppComponent {
   isAuth = false;
 
   constructor(private auth: Auth) {
-    console.log("Constructor - ",localStorage.getItem("credencial"))
     if(localStorage.getItem("credencial"))  
       this.isAuth = true;
   }
   atualizaLogin() {
-    console.log("Atualizando..", localStorage.getItem("credencial"))
     if(localStorage.getItem("credencial")){
       this.isAuth = true;
     }
@@ -30,7 +28,7 @@ export class AppComponent {
       .then(() => {
         if(this.isAuth) {
           alert("Deslogado com sucesso!")
-          localStorage.removeItem("credential");
+          localStorage.removeItem("credencial");
           this.isAuth = false;
         }
         else {

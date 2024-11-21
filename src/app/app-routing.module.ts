@@ -5,15 +5,14 @@ import { FormProdutosComponent } from './form-produtos/form-produtos.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard, canActivate, loggedIn, redirectUnauthorizedTo} from '@angular/fire/auth-guard'
 
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 
 
 const routes: Routes = [
   { path: 'tabela', component: TabelaProdutosComponent, 
     ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'cadastro', component: FormProdutosComponent, 
-    ...canActivate(redirectUnauthorizedToLogin) },
-  { path: 'login', component: LoginComponent}
+    ...canActivate(redirectUnauthorizedToLogin) }
 ];
 
 @NgModule({
